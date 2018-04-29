@@ -1,25 +1,5 @@
-html, body, h1, h2 {
+html, body, h1, h2, h3, h4, h5, h6 {
 	font-family: "Roboto", sans-serif;
-}
-
-.theme-l3 {
-	color: #000;
-	background-color: #f0f0f0;
-}
-
-.theme-l2 {
-	color: #fff;
-	background-color: #666666;
-}
-
-.theme-l1 {
-	color: #fff;
-	background-color: #333333;
-}
-
-.theme {
-	color: #fff;
-	background-color: #000000;
 }
 
 .w3-sidebar {
