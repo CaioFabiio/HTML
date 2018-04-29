@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Introdução ao HTML</title>
+    <title>Aula 4</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,10 +17,15 @@
     <div class="w3-top">
       <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
         <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+
+        <!-- <a href="#" class="w3-bar-item w3-button w3-theme-l1">Logo</a> -->
         
         <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Início</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Conteúdo</a>
         <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contato</a>
+        
+        <!-- <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Clients</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white">Partners</a> -->
       </div>
     </div>
 
@@ -44,51 +49,82 @@
 
       <div class="w3-row w3-padding-64">
         <div class="w3-twothird w3-container">
-          <h1 class="text-teal">O que é HTML?</h1>
-          <p>HTML é o formato padrão para criação de páginas web.</p>
-          <ul>
-            <li>HTML é abreviação para <i>Hyper Text Markup Language</i></li>
-            <li>HTML Descreve a estrutura de páginas Web utilizando marcação</li>
-            <li>Elementos HTML são a base das páginas HTML</li>
-            <li>Elementos são representados por <i>tags</i></li>
-            <li><i>Tags</i> rotulam partes do conteúdo, como "título", "parágrafo", "tabela", etc</li>
-            <li>Os navegadores não exibem as <i>tags</i> do HTML, mas as utilizam para formatar o conteúdo da página</li>
+          <h1 class="text-teal">Índice dos conteúdos</h1>  
+          <ul class="content">
+            <li><a href="#img">Tag &ltimg&gt - Revisão</a></li>
+            <li><a href="#format">Formatação de Texto</a></li>
+            <li><a href="#link">Links</a></li>
+            <li><a href="#table">Tabelas</a></li>
           </ul>
         </div>
       </div>
+      <hr class="w3-twothird">
 
       <div class="w3-row">
         <div class="w3-twothird w3-container">
-          <h1 class="text-teal">Um Exemplo HTML</h1>
-          
-          <!-- Code block -->
-          <div class="w3-container">
-            <pre class="w3-twothird">
-              <span>&lt!<mark class="tag">DOCTYPE</mark> html&gt</span>
-              <span>&lt<mark class="tag">html</mark>&gt</span>
-              <span>  &lt<mark class="tag">head</mark>&gt</span>
-              <span>    &lt<mark class="tag">title</mark>&gtTitulo da Pagina&lt/<mark class="tag">title</mark>&gt</span>
-              <span>  &lt/<mark class="tag">head</mark>&gt</span>
-              <span></span>
+          <h1 class="w3-text-teal"><a name="img">Tag &ltimg&gt - Revisão</a></h1>
+         
+          <p>A tag <span class="code">&ltimg&gt</span> define uma imagem na página.</p>
+          <p><span class="code">&ltimg&gt</span> possui somente atributos, e não tem uma tag de fechamento.</p>
+          <p><span class="code">src</span> especifica o caminho da imagem.</p>
+          <p><span class="code">alt</span> fornece uma descrição para a imagem. É importante para acessibipdade na internet.</p>
+          <p><span class="code">style</span> especifica a largura (<span class="code">width</span>) e altura (<span class="code">height</span>) da imagem.</p>
 
-              <span>  &lt<mark class="tag">body</mark>&gt</span>
-              <span>    &lt<mark class="tag">h1</mark>&gtMeu primeiro titulo&lt/<mark class="tag">h1</mark>&gt</span>
-              <span>    &lt<mark class="tag">p</mark>&gtMeu primeiro paragrafo&lt/<mark class="tag">p</mark>&gt</span>
-              <span>  &lt/<mark class="tag">body</mark>&gt</span>
-              <span>&lt/<mark class="tag">html</mark>&gt</span>
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="example">
+              <span>&lt<mark class="tag">img</mark> <mark class="atr">src</mark><mark class="str">="imagem.jpg"</mark> <mark class="atr">alt</mark><mark class="str">="Descrição da imagem"</mark> <mark class="atr">style</mark><mark class="str">="</mark><mark class="stl">width</mark>:<mark class="nmb">480</mark><mark class="unit">px</mark>;<mark class="stl">height</mark>:<mark class="nmb">360</mark><mark class="unit">px</mark>;<mark class="str">"</mark>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          
+          <p>Alternativamente, também podem ser usados os atributos <span class="code">width</span> e <span class="code">height</span> para definir o tamanho da imagem.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="example">
+              <span>&lt<mark class="tag">img</mark> <mark class="atr">src</mark><mark class="str">="imagem.jpg"</mark> <mark class="atr">alt</mark><mark class="str">="Descrição da imagem"</mark> <mark class="atr">width</mark><mark class="str">="480"</mark> <mark class="atr">height</mark><mark class="str">="512"</mark>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Imagens em Outra Pasta</h3>
+          <p>Se não especificado, o navegador espera encontrar a imagem na mesma pasta do arquivo HTML.</p>
+          <p>Por padrão, é comum armazenar as imagens em uma subpasta. O nome da pasta deve ser incluído em <span class="code">src</span>:</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="example">
+              <span>&lt<mark class="tag">img</mark> <mark class="atr">src</mark><mark class="str">="/pasta/imagem.jpg"</mark> <mark class="atr">alt</mark><mark class="str">="Descrição da imagem"</mark> <mark class="atr">style</mark><mark class="str">="</mark><mark class="stl">width</mark>:<mark class="nmb">480</mark><mark class="unit">px</mark>;<mark class="stl">height</mark>:<mark class="nmb">360</mark><mark class="unit">px</mark>;<mark class="str">"</mark>&gt</span>
             </pre>
           </div>
           <!-- End code block -->
 
-          <ul>
-            <li>A declaração <span class="code">&lt!DOCTYPE html&gt</span> define que o arquivo será HTML5</li>
-            <li>O elemento <span class="code">&lthtml&gt</span> é a base de uma página HTML</li>
-            <li>O elemento <span class="code">&lthead&gt</span> contém metainformações sobre o arquivo</li>
-            <li>O elemento <span class="code">&lttitle&gt</span> especifica um título para o arquivo</li>
-            <li>O elemento <span class="code">&ltbody&gt</span> contém o conteúdo visual da página</li>
-            <li>O elemento <span class="code">&lth1&gt</span> define um cabeçalho grande</li>
-            <li>O elemento <span class="code">&ltp&gt</span> define um parágrafo</li> 
-          </ul>
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+      
+      <div class="w3-row">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal"><a name="format">Formatação de Texto</a></h1>
+          
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a class="w3-button w3-black" href="#">1</a>
+          <a class="w3-button w3-hover-black" href="#">2</a>
+          <a class="w3-button w3-hover-black" href="#">3</a>
+          <a class="w3-button w3-hover-black" href="#">4</a>
+          <a class="w3-button w3-hover-black" href="#">5</a>
+          <a class="w3-button w3-hover-black" href="#">»</a>
         </div>
       </div>
 
