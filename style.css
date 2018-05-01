@@ -23,17 +23,14 @@ html, body, h1, h2, h3, h4, h5, h6 {
 }
 
 .tag, .unit {
-	background-color: unset;
 	color: #F92672;
 }
 
 .atr{
-	background-color: unset;
 	color: #A6E22E;
 }
 
 .str {
-	background-color: unset;
 	color: #FFE792;
 }
 
@@ -46,16 +43,14 @@ html, body, h1, h2, h3, h4, h5, h6 {
 }
 
 .stl {
-	background-color: unset;
 	color: #66D9EF;
 }
 
 .nmb {
-	background-color: unset;
 	color: #AE81FF;
 }
 
-pre {
+.block {
   	background-color: #272822;
   	font-family: Consolas, Menlo, Monaco, Lucida Console, Courier New, monospace;
   	font-size: 12px;
@@ -72,12 +67,12 @@ pre {
   	text-align: left!important;
 }
 
-pre span {
+.line {
   	display: block;
   	line-height: 1rem;
 }
 
-pre span::before {
+.line::before {
   	text-align: right;
   	counter-increment: line;
   	content: counter(line);
