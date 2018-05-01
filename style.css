@@ -65,22 +65,28 @@ html, body, h1, h2, h3, h4, h5, h6 {
   	counter-reset: line;
   	line-height: 0;
   	text-align: left!important;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .line {
-  	display: block;
-  	line-height: 1rem;
+    display: block;
+    line-height: 1rem;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
 }
 
 .line::before {
-  	text-align: right;
-  	counter-increment: line;
-  	content: counter(line);
-  	display: inline-block;
-  	border-right: 1px solid #ddd;
-  	width: 2em;
-  	padding: 0 .5em;
-  	margin-right: 1em;
-  	opacity: 0.5;
+    text-align: right;
+    counter-increment: line;
+    content: counter(line);
+    display: inline-block;
+    border-right: 1px solid #ddd;
+    width: 2em;
+    padding: 0 .5em;
+    margin-right: 1em;
+    opacity: 0.5;
   }
 }
