@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aula 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Início</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Conteúdo</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Aulas</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="aula04.html">Aula 4</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#"></a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#"></a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#"></a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Tabelas</h1>
+          <p>Uma tabela é definida com a tag <span class="code">&lttable&gt</span>.</p>
+          <p>Cada linha da tabela é definida com a tag <span class="code">&lttr&gt</span>.</p>
+          <p>Uma célula de cabeçalho é definida por <span class="code">&ltth&gt</span>. Por padrão, linhas de cabeçalho são centralizadas e em negrito.</p>
+          <p>Uma célula é definida com a tag <span class="code">&lttd&gt</span>.</p>
+          
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt!<span class="tag">DOCTYPE</span> html&gt</span>
+              <span class="line">&lt<span class="tag">html</span>&gt</span>
+              <span class="line">  &lt<span class="tag">head</span>&gt</span>
+              <span class="line">    &lt<span class="tag">title</span>&gtExemplo de Tabela&lt/<span class="tag">title</span>&gt</span>
+              <span class="line">    &lt<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">head</span>&gt</span>
+              <span class="line"></span>
+              <span class="line">  &lt<span class="tag">body</span>&gt</span>
+              <span class="line">    &lt<span class="tag">table</span> <span class="atr">style</span><span class="str">="</span><span class="stl">width</span>:<span class="nmb">100</span><span class="unit">%</span><span class="str">"</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">th</span>&gtNome&lt/<span class="tag">th</span>&gt</span>
+              <span class="line">        &lt<span class="tag">th</span>&gtSobrenome&lt/<span class="tag">th</span>&gt</span>
+              <span class="line">        &lt<span class="tag">th</span>&gtIdade&lt/<span class="tag">th</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtJúlia&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtLisboa&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gt25&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtRicardo&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtOliveira&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gt28&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">    &lt/<span class="tag">table</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">body</span>&gt</span>
+              <span class="line">&lt/<span class="tag">html</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <p>Para visualizar as bordas, utiliza-se o atributo <span class="code">border</span>.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <div> 
+            <pre class="block example">
+              <span class="line">&lt<span class="tag">table</span> <span class="atr">border</span><span class="str">="1"</span>&gt&lt/<span class="tag">table</span>&gt</span>
+            </pre>
+          </div>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Mesclar Células</h3>
+          <p>O atributo <span class="code">colspan</span> é utilizado para mesclar a célula em mais de uma coluna.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt!<span class="tag">DOCTYPE</span> html&gt</span>
+              <span class="line">&lt<span class="tag">html</span>&gt</span>
+              <span class="line">  &lt<span class="tag">head</span>&gt</span>
+              <span class="line">    &lt<span class="tag">title</span>&gtExemplo de Tabela&lt/<span class="tag">title</span>&gt</span>
+              <span class="line">    &lt<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">head</span>&gt</span>
+              <span class="line"></span>
+              <span class="line">  &lt<span class="tag">body</span>&gt</span>
+              <span class="line">    &lt<span class="tag">table</span> <span class="atr">border</span><span class="str">="1"</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">th</span>&gtNome&lt/<span class="tag">th</span>&gt</span>
+              <span class="line">        &lt<span class="tag">th</span> <span class="atr">colspan</span><span class="str">="2"</span>&gtTelefone&lt/<span class="tag">th</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtBill Gates&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gt55577854&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gt55577855&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">    &lt/<span class="tag">table</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">body</span>&gt</span>
+              <span class="line">&lt/<span class="tag">html</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <p>O atributo <span class="code">rowspan</span> é utilizado para mesclar a célula em mais de uma linha.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt!<span class="tag">DOCTYPE</span> html&gt</span>
+              <span class="line">&lt<span class="tag">html</span>&gt</span>
+              <span class="line">  &lt<span class="tag">head</span>&gt</span>
+              <span class="line">    &lt<span class="tag">title</span>&gtExemplo de Tabela&lt/<span class="tag">title</span>&gt</span>
+              <span class="line">    &lt<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">head</span>&gt</span>
+              <span class="line"></span>
+              <span class="line">  &lt<span class="tag">body</span>&gt</span>
+              <span class="line">    &lt<span class="tag">table</span> <span class="atr">border</span><span class="str">="1"</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">th</span>&gtNome&lt/<span class="tag">th</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtBill Gates&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">th</span> <span class="atr">rowspan</span><span class="str">="2"</span>&gtTelefone&lt/<span class="tag">th</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gt55577854&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gt55577855&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">    &lt/<span class="tag">table</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">body</span>&gt</span>
+              <span class="line">&lt/<span class="tag">html</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Título da Tabela</h3>
+          <p>A tag <span class="code">&ltcaption&gt</span> define um título para a tabela. Deve ser adicionada imediatamente após a tag <span class="code">&lttable&gt</span></p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt!<span class="tag">DOCTYPE</span> html&gt</span>
+              <span class="line">&lt<span class="tag">html</span>&gt</span>
+              <span class="line">  &lt<span class="tag">head</span>&gt</span>
+              <span class="line">    &lt<span class="tag">title</span>&gtExemplo de Tabela&lt/<span class="tag">title</span>&gt</span>
+              <span class="line">    &lt<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">head</span>&gt</span>
+              <span class="line"></span>
+              <span class="line">  &lt<span class="tag">body</span>&gt</span>
+              <span class="line">    &lt<span class="tag">table</span> <span class="atr">border</span><span class="str">="1"</span>&gt</span>
+              <span class="line">      &lt<span class="tag">caption</span>&gtEconomia Mensal&lt/<span class="tag">caption</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">th</span>&gtMês&lt/<span class="tag">th</span>&gt</span>
+              <span class="line">        &lt<span class="tag">th</span>&gtEconomia&lt/<span class="tag">th</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtJaneiro&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtR$100,00&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">      &lt<span class="tag">tr</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtFevereiro&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">        &lt<span class="tag">td</span>&gtR$50,00&lt/<span class="tag">td</span>&gt</span>
+              <span class="line">      &lt/<span class="tag">tr</span>&gt</span>
+              <span class="line">    &lt/<span class="tag">table</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">body</span>&gt</span>
+              <span class="line">&lt/<span class="tag">html</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-row w3-padding-16">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Resumo</h1>
+          <ul>
+            <li><span class="code">&lttable&gt</span> define uma tabela</li>
+            <li><span class="code">&lttr&gt</span> define uma linha</li>
+            <li><span class="code">&lttd&gt</span> define uma célula</li>
+            <li><span class="code">&ltth&gt</span> define uma célula de cabeçalho</li>
+            <li><span class="code">&ltcaption&gt</span> define um título para a tabela</li>
+            <li><span class="code">border</span> define as bordas da tabela</li>
+            <li><span class="code">colspan</span> mescla uma célula em várias colunas</li>
+            <li><span class="code">rowspan</span> mescla uma célula em várias linhas</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <!-- Pagination -->
+      <div class="w3-center w3-padding-32 w3-container">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="aula04-3.html">«</a>
+          <a class="w3-button w3-hover-black" href="aula04.html">1</a>
+          <a class="w3-button w3-hover-black" href="aula04-2.html">2</a>
+          <a class="w3-button w3-hover-black" href="aula04-3.html">3</a>
+          <a class="w3-button w3-black" href="#">4</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio e Felipe Arisi</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
