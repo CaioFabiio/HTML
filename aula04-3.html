@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aula 4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Início</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Conteúdo</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Aulas</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="aula04.html">Aula 4</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#"></a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#"></a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#"></a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Links</h1>
+          <p>Links são encontrados em todas as páginas web. Links permitem que os usuários naveguem de uma página a outra.</p>
+          <p>A tag <span class="code">&lta&gt</span> define um link.</p>
+
+          <!-- Code block -->
+          <div> 
+            <pre class="block example">
+              <span class="line">&lt<span class="tag">a</span> <span class="atr">href</span><span class="str">="url"</span>&gtTexto do link&lt/<span class="tag">a</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+     
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <div> 
+            <pre class="block example">
+              <span class="line">&lt<span class="tag">a</span> <span class="atr">href</span><span class="str">="http://www.google.com/"</span>&gtGoogle&lt/<span class="tag">a</span>&gt</span>
+            </pre>
+          </div>
+          </div>
+          <!-- End code block -->
+
+          <p>O atributo <span class="code">href</span> especifica o endereço de destino do link (<a href="https://google.com" target="_blank">http://www.google.com</a>).</p>
+          <p>O <i>Texto do Link</i> é a parte visível do link na página.</p>
+     
+          <hr>
+
+          <h3 class="text-teal">Links Locais</h3>
+          <p>O exemplo acima utilizou um endereço da internet.</p>
+          <p>Um link local é especificado com o endereço do arquivo.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt<span class="tag">a</span> <span class="atr">href</span><span class="str">="exemplo.html"</span>&gtExercício Anterior&lt/<span class="tag">a</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Atributo <i>Target</i></h3>
+          <p>O atributo <span class="code">target</span> especifica onde abrir o link.</p>
+          <p><span class="code">target</span> pode ter um dos seguintes valores:</p>
+          <ul>
+            <li><span class="code">_blank</span> abre o link em uma nova aba ou janela</li>
+            <li><span class="code">_self</span> abre o link na mesma aba (padrão)</li>
+          </ul>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt<span class="tag">a</span> <span class="atr">href</span><span class="str">="http:www.google.com/"</span> <span class="atr">target</span><span class="str">="_blank"</span>&gtGoogle&lt/<span class="tag">a</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Imagens como Links</h3>
+          <p>Para utilizar uma imagem como link, basta inserir a tag <span class="code">&ltimg&gt</span> dentro da tag <span class="code">&lta&gt</span>.</p>
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt<span class="tag">a</span> <span class="atr">href</span><span class="str">="link"</span>&gt</span>
+              <span class="line">  &lt<span class="tag">img</span> <span class="atr">src</span><span class="str">="imagem.jpg"</span> <span class="atr">alt</span><span class="str">="Descrição da imagem"</span> <span class="atr">style</span><span class="str">="</span><span class="stl">width</span>:<span class="nmb">480</span><span class="unit">px</span>;<span class="stl">height</span>:<span class="nmb">360</span><span class="unit">px</span>;<span class="str">"</span>&gt</span>
+              <span class="line">&lt/<span class="tag">a</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Título do Link</h3>
+          <p>O atributo <span class="code">title</span> especifica uma informação extra sobre o elemento.</p>
+          <p>É visualizado quando o mouse fica sobre o link.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt<span class="tag">a</span> <span class="atr">href</span><span class="str">="http:www.google.com/"</span> <span class="atr">title</span><span class="str">="Busca"</span>&gtGoogle&lt/<span class="tag">a</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+          
+          <h3 class="text-teal">Marcador</h3>
+          <p>Marcadores são usados para permitir que o usuário possa pular para uma parte específica da página. Podem ser bastante úteis em páginas longas.</p>
+          <p>Para usar um marcador, primeiro é necessário criá-lo, e então adicioná-lo ao link.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <p>Primeiro, cria-se o marcador com o atributo <span class="code">id</span>:</p>
+            
+            <pre class="block example">              
+              <span class="line">&lt<span class="tag">h3</span> <span class="atr">id</span><span class="str">="C4"</span>&gtCapítulo 4&lt/<span class="tag">h3</span>&gt</span>
+            </pre>
+
+            <p>Adiciona-se então um link ao marcador, na mesma página:</p>
+
+            <pre class="block example">              
+              <span class="line">&lt<span class="tag">a</span> <span class="atr">href</span><span class="str">="#C4"</span>&gtIr para o Capítulo 4&lt/<span class="tag">a</span>&gt</span>
+            </pre>
+
+            <p>Ou adiciona-se um link ao marcador, a partir de outra página:</p>
+
+            <pre class="block example">              
+              <span class="line">&lt<span class="tag">a</span> <span class="atr">href</span><span class="str">="arquivo.html#C4"</span>&gtIr para o Capítulo 4&lt/<span class="tag">a</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-row w3-padding-16">
+        <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal"><a name="summary">Resumo</a></h1>
+          <ul>
+            <li><span class="code">&lta&gt</span> define um link</li>
+            <li><span class="code">href</span> especifica o endereço do link</li>
+            <li><span class="code">target</span> define onde o link será aberto</li>
+            <li><span class="code">&ltimg&gt</span> dentro de um <span class="code">&lta&gt</span> para usar uma imagem como link</li>
+            <li><span class="code">id="valor"</span> define marcadores na página</li>
+            <li><span class="code">href="#valor"</span> link para o marcador</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <!-- Pagination -->
+      <div class="w3-center w3-padding-32 w3-container">
+        <div class="w3-bar">
+          <a class="w3-button w3-hover-black" href="aula04-2.html">«</a>
+          <a class="w3-button w3-hover-black" href="aula04.html">1</a>
+          <a class="w3-button w3-hover-black" href="aula04-2.html">2</a>
+          <a class="w3-button w3-black" href="#">3</a>
+          <a class="w3-button w3-hover-black" href="aula04-4.html">4</a>
+          <a class="w3-button w3-hover-black" href="#">5</a>
+          <a class="w3-button w3-hover-black" href="aula04-4.html">»</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio e Felipe Arisi</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
