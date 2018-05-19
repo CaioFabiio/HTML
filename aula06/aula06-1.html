@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blocos - HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Início</a>
+        <a href="../exercises.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Exercícios</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Aulas</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="aula04-1.html">Aula 4</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="../aula05/aula05-1.html">Aula 5</a>
+      <a class="w3-bar-item w3-button w3-black" href="#">Aula 6</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Elementos de Bloco e Linha</h1>
+          
+          <h3 class="text-teal">Elemento de Bloco</h3>
+          <p>Um elemento de bloco sempre se inicia em uma nova linha e preenche todo o espaço disponível na linha que está.</p>
+          
+          <div style="border:1px solid #009688">
+            O elemento <span class="code">&ltdiv&gt</span> é um elemento de bloco.
+          </div>
+
+          <p>O elemento <span class="code">&ltdiv&gt</span> geralmente é utilizado como um container para outros elementos. Pode ser usado para estilizar blocos de conteúdo.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt!<span class="tag">DOCTYPE</span> html&gt</span>
+              <span class="line">&lt<span class="tag">html</span>&gt</span>
+              <span class="line">  &lt<span class="tag">head</span>&gt</span>
+              <span class="line">    &lt<span class="tag">title</span>&gtElemento &ampltdiv&ampgt&lt/<span class="tag">title</span>&gt</span>
+              <span class="line">    &lt<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">head</span>&gt</span>
+              <span class="line"></span>
+              
+              <span class="line">  &lt<span class="tag">body</span>&gt</span>
+              <span class="line">    &lt<span class="tag">div</span> <span class="atr">style</span><span class="str">="</span><span class="stl">background-color</span>:<span class="stl">black</span>;<span class="stl">color</span>:<span class="stl">white</span>;<span class="stl">padding</span>:<span class="nmb">20</span><span class="unit">px</span>;<span class="str">"</span>&gt</span>
+              <span class="line">      &lt<span class="tag">h2</span>&gtTóquio&lt/<span class="tag">h2</span>&gt</span>
+              <span class="line">      &lt<span class="tag">p</span>&gtTóquio é a capital do Japão. Situa-se em Honshu, a maior ilha do arquipélago.&lt/<span class="tag">p</span>&gt</span>
+              <span class="line">    &lt/<span class="tag">div</span>&gt</span>
+
+              <span class="line">  &lt/<span class="tag">body</span>&gt</span>
+              <span class="line">&lt/<span class="tag">html</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Elemento de Linha</h3>
+          <p>Um elemento de linha não se inicia em uma nova linha e somente preenche o espaço necessário.</p>
+
+          <p>Este é o <span style="border: 1px solid #009688;">elemento de linha <span class="code">&ltspan&gt</span> dentro de</span> um parágrafo.</p>
+
+          <p>O elemento <span class="code">&ltspan&gt</span> é utilizado como container para textos. Pode ser utilizado para estilizar textos.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt!<span class="tag">DOCTYPE</span> html&gt</span>
+              <span class="line">&lt<span class="tag">html</span>&gt</span>
+              <span class="line">  &lt<span class="tag">head</span>&gt</span>
+              <span class="line">    &lt<span class="tag">title</span>&gtElemento &ampltspan&ampgt&lt/<span class="tag">title</span>&gt</span>
+              <span class="line">    &lt<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">head</span>&gt</span>
+              <span class="line"></span>
+              
+              <span class="line">  &lt<span class="tag">body</span>&gt</span>
+              <span class="line">    &lt<span class="tag">div</span> <span class="atr">style</span><span class="str">="</span><span class="stl">background-color</span>:<span class="stl">black</span>;<span class="stl">color</span>:<span class="stl">white</span>;<span class="stl">padding</span>:<span class="nmb">20</span><span class="unit">px</span>;<span class="str">"</span>&gt</span>
+              <span class="line">      &lt<span class="tag">h2</span>&gtTóquio&lt/<span class="tag">h2</span>&gt</span>
+              <span class="line">      &lt<span class="tag">p</span>&gtTóquio é a capital do &lt<span class="tag">span</span> <span class="atr">style</span><span class="str">="</span><span class="stl">color</span>:<span class="stl">red</span>;<span class="str">"</span>&gtJapão&lt/<span class="tag">span</span>&gt. Situa-se em Honshu, a maior
+              ilha do arquipélago.&lt/<span class="tag">p</span>&gt</span>
+              <span class="line">    &lt/<span class="tag">div</span>&gt</span>
+
+              <span class="line">  &lt/<span class="tag">body</span>&gt</span>
+              <span class="line">&lt/<span class="tag">html</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <!-- Pagination -->
+      <div class="w3-center w3-padding-32 w3-container">
+        <div class="w3-bar">
+          <a class="w3-button w3-black" href="#">1</a>
+          <a class="w3-button w3-hover-black" href="../exercises.html">2</a>
+          <a class="w3-button w3-hover-black" href="../exercises.html">»</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio e Felipe Arisi</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>
