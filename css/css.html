@@ -177,6 +177,115 @@
           <!-- End code block -->
           <hr>
 
+          <h3 class="text-teal">Sintaxe CSS</h3>
+          <p>Uma instrução em CSS consiste em um <i>seletor</i> e um bloco de <i>declaração</i>.</p>
+          
+          <img src="selector.gif"/>
+          
+          <p>O <i>seletor</i> indica o elemento a ser estilizado.</p>
+          <p>O bloco de <i>declarações</i> contém uma ou mais declarações, separadas por ponto e vírgula.</p>
+          <p>Cada declaração inclui uma propriedade e valor, separados por dois pontos.</p>
+          <p>Uma declaração deve terminar com ponto e vírgula, e o bloco de declaração deve estar entre chaves.</p>
+          <p>No exemplo a seguir, todos os elementos de parágrafos estarão centralizados e com o texto em vermelho:</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p</span> {</span>
+              <span class="line">  <span class="stl">text-align</span>: <span class="stl">center</span>;</span>
+              <span class="line">  <span class="stl">color</span>: <span class="stl">red</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Seletores</h3>
+          <p>Os seletores baseiam-se pelo nome do elemento para aplicar estilo.</p>
+          <p>No exemplo acima, todos os elementos <span class="code">&ltp&gt</span> presentes na página estarão centralizado e serão vermelhos.</p>
+          <hr>
+
+          <h3 class="text-teal">Classes</h3>
+          <p>O atributo <span class="code">class</span> especifica uma ou mais classes para um elemento. Pode ser usado pelo CSS para atribuir estilo a todos os elementos de determinada classe.</p>
+          <p>Para selecionar uma classe, utiliza-se o caractere <span class="code">.</span> <del>(ponto)</del>, seguido pelo nome da classe.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt!<span class="tag">DOCTYPE</span> html&gt</span>
+              <span class="line">&lt<span class="tag">html</span>&gt</span>
+              <span class="line">  &lt<span class="tag">head</span>&gt</span>
+              <span class="line">    &lt<span class="tag">title</span>&gtClasses&lt/<span class="tag">title</span>&gt</span>
+              <span class="line">    &lt<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt</span>
+              <span class="line">    &lt<span class="tag">style</span>&gt</span>
+              <span class="line">      <span class="atr">.cidades</span> {</span>
+              <span class="line">        <span class="stl">background-color</span>: <span class="stl">tomato</span>;</span>
+              <span class="line">        <span class="stl">color</span>: <span class="stl">white</span>;</span>
+              <span class="line">        <span class="stl">padding</span>: <span class="nmb">10</span><span class="unit">px</span>;</span>
+              <span class="line">      }</span>
+              <span class="line">    &lt/<span class="tag">style</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">head</span>&gt</span>
+              
+              <span class="line"></span>
+
+              <span class="line">  &lt<span class="tag">body</span>&gt</span>
+              <span class="line">    &lt<span class="tag">h2</span> <span class="atr">class</span>=<span class="str">"cidades"</span>&gtLondres&lt/<span class="tag">h2</span>&gt</span>
+              <span class="line">    &lt<span class="tag">p</span>&gtLondres é a capital da Inglaterra.&lt/<span class="tag">p</span>&gt</span>
+              
+              <span class="line"></span>
+              
+              <span class="line">    &lt<span class="tag">h2</span> <span class="atr">class</span>=<span class="str">"cidades"</span>&gtParis&lt/<span class="tag">h2</span>&gt</span>
+              <span class="line">    &lt<span class="tag">p</span>&gtParis é a capital da França.&lt/<span class="tag">p</span>&gt</span>
+              
+              <span class="line"></span>
+
+              <span class="line">    &lt<span class="tag">h2</span> <span class="atr">class</span>=<span class="str">"cidades"</span>&gtTóquio&lt/<span class="tag">h2</span>&gt</span>
+              <span class="line">    &lt<span class="tag">p</span>&gtTóquio é a capital do Japão.&lt/<span class="tag">p</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">body</span>&gt</span>
+              <span class="line">&lt/<span class="tag">html</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Atributo id</h3>
+          <p>O atributo <span class="code">id</span> especifica uma identificação <del style="color:maroon;">nome</del> exclusiva para o elemento.</p>
+          <p style="background-color:#F0F0F0"><em>NOTA: Um id <b>DEVE</b> ser único dentro do arquivo HTML.</em></p>
+          <p>O atributo <span class="code">id</span> pode ser usado pelo CSS para atribuir estilo a um único elemento.</p>
+          <p>Para selecionar um elemento com um id específico, utiliza-se o caractere <span class="code">#</span> seguido do id do elemento.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt!<span class="tag">DOCTYPE</span> html&gt</span>
+              <span class="line">&lt<span class="tag">html</span>&gt</span>
+              <span class="line">  &lt<span class="tag">head</span>&gt</span>
+              <span class="line">    &lt<span class="tag">title</span>&gtAtributo id&lt/<span class="tag">title</span>&gt</span>
+              <span class="line">    &lt<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt</span>
+              <span class="line">    &lt<span class="tag">style</span>&gt</span>
+              <span class="line">      <span class="tag">#titulo</span> {</span>
+              <span class="line">        <span class="stl">background-color</span>: <span class="stl">lightblue</span>;</span>
+              <span class="line">        <span class="stl">color</span>: <span class="stl">black</span>;</span>
+              <span class="line">        <span class="stl">padding</span>: <span class="nmb">40</span><span class="unit">px</span>;</span>
+              <span class="line">        <span class="stl">text-align</span>: <span class="stl">center</span>;</span>
+              <span class="line">      }</span>
+              <span class="line">    &lt/<span class="tag">style</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">head</span>&gt</span>
+              
+              <span class="line"></span>
+
+              <span class="line">  &lt<span class="tag">body</span>&gt</span>
+              <span class="line">    &lt<span class="tag">h1</span> <span class="atr">id</span>=<span class="str">"titulo"</span>&gtIsto é um cabeçalho&lt/<span class="tag">h1</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">body</span>&gt</span>
+              <span class="line">&lt/<span class="tag">html</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
         </div>
       </div>
 
