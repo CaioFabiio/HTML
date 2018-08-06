@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desenvolvimento Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">HTML</a>
+        <a href="css.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CSS</a>
+        <a href="../exercises.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Exercícios</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
+      <a class="w3-bar-item w3-button w3-black" href="#">Introdução</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="selectors.html">Seletores</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="#">Bordas</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Introdução ao HTML</h1>
+          
+          <!-- Pagination -->
+          <div class="w3-bar">
+            <a class="w3-button w3-black w3-right" href="#">Próximo »</a>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">O Que é HTML?</h3>
+          <p>HTML é o formato padrão para criação de páginas web.</p>
+          <ul>
+            <li>HTML é abreviação para <i>Hyper Text Markup Language</i></li>
+            <li>HTML Descreve a estrutura de páginas Web utilizando marcação</li>
+            <li>Elementos HTML são a base das páginas HTML</li>
+            <li>Elementos são representados por <i>tags</i></li>
+            <li><i>Tags</i> rotulam partes do conteúdo, como "título", "parágrafo", "tabela", etc</li>
+            <li>Os navegadores não exibem as <i>tags</i> do HTML, mas as utilizam para formatar o conteúdo da página</li>
+          </ul>
+          <hr>
+
+          <h3 class="text-teal">Um Exemplo HTML</h3>
+          
+          <!-- Code block -->
+          <div>
+            <pre class="block">
+              <span class="line">&lt!<span class="tag">DOCTYPE</span> html&gt</span>
+              <span class="line">&lt<span class="tag">html</span>&gt</span>
+              <span class="line">  &lt<span class="tag">head</span>&gt</span>
+              <span class="line">    &lt<span class="tag">title</span>&gtTitulo da Pagina&lt/<span class="tag">title</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">head</span>&gt</span>
+              <span class="line"></span>
+
+              <span class="line">  &lt<span class="tag">body</span>&gt</span>
+              <span class="line">    &lt<span class="tag">h1</span>&gtMeu primeiro titulo&lt/<span class="tag">h1</span>&gt</span>
+              <span class="line">    &lt<span class="tag">p</span>&gtMeu primeiro paragrafo&lt/<span class="tag">p</span>&gt</span>
+              <span class="line">  &lt/<span class="tag">body</span>&gt</span>
+              <span class="line">&lt/<span class="tag">html</span>&gt</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <ul>
+            <li>A declaração <span class="code">&lt!DOCTYPE html&gt</span> define que o arquivo será HTML5</li>
+            <li>O elemento <span class="code">&lthtml&gt</span> é a base de uma página HTML</li>
+            <li>O elemento <span class="code">&lthead&gt</span> contém metainformações sobre o arquivo</li>
+            <li>O elemento <span class="code">&lttitle&gt</span> especifica um título para o arquivo</li>
+            <li>O elemento <span class="code">&ltbody&gt</span> contém o conteúdo visual da página</li>
+            <li>O elemento <span class="code">&lth1&gt</span> define um cabeçalho grande</li>
+            <li>O elemento <span class="code">&ltp&gt</span> define um parágrafo</li> 
+          </ul>
+          <hr>
+
+          <h3 class="text-teal">Tags</h3>
+          <p>Tags em HTML são elementos entre <span class="code">&lt &gt</span>:</p>
+
+          <div class="w3-panel w3-light-grey w3-border">
+            <p class="w3-xlarge">&lt;tag&gt;conteúdo...&lt;/tag&gt;</p>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-padding-32 w3-container">
+        <div class="w3-bar w3-twothird">
+          <a class="w3-button w3-black w3-right" href="#">Próximo »</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio e Felipe Arisi</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
