@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elementos - HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">HTML</a>
+        <a href="css.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CSS</a>
+        <a href="../exercises.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Exercícios</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="../index.html">Introdução</a>
+      <a class="w3-bar-item w3-button w3-black" href="#">Elementos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="02-attributes.html">Atributos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="03-headings.html">Cabeçalhos</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Elementos</h1>
+          
+          <!-- Pagination -->
+          <div class="w3-bar">
+            <a class="w3-button w3-black" href="../index.html">« Introdução</a>
+            <a class="w3-button w3-black w3-right" href="02-attributes.html">Atributos »</a>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Elementos HTML</h3>
+          <p>Um elemento HTML normalmente consiste de uma tag de <b>início</b> e uma tag de <b>fim</b>, com o conteúdo inserido no meio:</p>
+
+          <!-- Code block -->
+          <div>
+            <pre class="block">
+              <span class="line">&lt;<span class="tag">tag</span>&gt;Conteúdo...&lt;/<span class="tag">tag</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <p>O elemento HTML vai da tag de abertura até a tag de fechamento:</p>
+
+          <!-- Code block -->
+          <div>
+            <pre class="block">
+              <span class="line">&lt;<span class="tag">p</span>&gt;Meu primeiro parágrafo.&lt;/<span class="tag">p</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <table class="w3-table-all">
+            <tr>
+              <th style="width:33%">Tag de abertura</th>
+              <th style="width:33%">Conteúdo</th>
+              <th>Tag de fechamento</th>
+            </tr>
+            
+            <tr>
+              <td>&lt;h1&gt;</td>
+              <td>Meu primeiro cabeçalho</td>
+              <td>&lt;/h1&gt;</td>
+            </tr>
+            
+            <tr>
+              <td>&lt;p&gt;</td>
+              <td>Meu primeiro parágrafo.</td>
+              <td>&lt;/p&gt;</td>
+            </tr>
+            
+            <tr>
+              <td>&lt;br&gt;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+
+          <div class="panel note">
+            <p>Elementos sem conteúdo são chamados elementos vazios. Elementos vazios não possuem tag de fechamento, assim como o elemento <span class="code">&lt;br&gt;</span> (que indica a quebra de linha).</p>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Elementos Aninhados</h3>
+          <p>Elementos HTML podem ser aninhados (elementos podem conter elementos).</p>
+
+          <p>Todo documento HTML consiste de elementos aninhados.</p>
+          <p>Este exemplo contém quatro elementos:</p>          
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line">&lt;!<span class="tag">DOCTYPE</span> html&gt;</span>
+              <span class="line">&lt;<span class="tag">html</span>&gt;</span>
+              <span class="line">  &lt;<span class="tag">body</span>&gt;</span>
+
+              <span class="line">    &lt;<span class="tag">h1</span>&gt;Meu primeiro cabeçalho&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span>&gt;Meu primeiro parágrafo.&lt;/<span class="tag">p</span>&gt;</span>
+
+              <span class="line">  &lt;/<span class="tag">body</span>&gt;</span>
+              <span class="line">&lt;/<span class="tag">html</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <h4 class="text-teal">Exemplo Explicado</h4>
+          <p>O elemento <span class="code">&lt;html&gt;</span> define o documento inteiro.</p>
+          
+          <p>Contém uma tag de abertura <span class="code">&lt;html&gt;</span> e uma tag de fechamento <span class="code">&lt;/html&gt;</span></p>
+
+          <p>O conteúdo do elemento é outro elemento (o elemento <span class="code">&lt;body&gt;</span>).</p>
+
+          <!-- Code block -->
+          <div>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">html</span>&gt;</span>
+              <span class="line">  &lt;<span class="tag">body</span>&gt;</span>
+
+              <span class="line">    &lt;<span class="tag">h1</span>&gt;Meu primeiro cabeçalho&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span>&gt;Meu primeiro parágrafo.&lt;/<span class="tag">p</span>&gt;</span>
+
+              <span class="line">  &lt;/<span class="tag">body</span>&gt;</span>
+              <span class="line">&lt;/<span class="tag">html</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <p>O elemento <span class="code">&lt;body&gt;</span> define o <b>corpo do documento</b>.</p>
+
+          <p>Contém uma tag de abertura <span class="code">&lt;body&gt;</span> e uma tag de fechamento <span class="code">&lt;/body&gt;</span></p>
+          <p>Seu conteúdo são dois outros elementos (<span class="code">&lt;h1&gt;</span> e <span class="code">&lt;p&gt;</span>).</p>
+
+          <!-- Code block -->
+          <div>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">body</span>&gt;</span>
+
+              <span class="line">  &lt;<span class="tag">h1</span>&gt;Meu primeiro cabeçalho&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">  &lt;<span class="tag">p</span>&gt;Meu primeiro parágrafo.&lt;/<span class="tag">p</span>&gt;</span>
+
+              <span class="line">&lt;/<span class="tag">body</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <p>O elemento <span class="code">&lt;h1&gt;</span> define um <b>cabeçalho</b>.</p>
+          <p>Contém uma tag de abertura <span class="code">&lt;h1&gt;</span> e uma tag de fechamento <span class="code">&lt;/h1&gt;</span>.</p>
+          <p>O conteúdo do elemento é: <i>Meu primeiro cabeçalho</i>.</p>
+
+          <!-- Code block -->
+          <div>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">h1</span>&gt;Meu primeiro cabeçalho&lt;/<span class="tag">h1</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <p>O elemento <span class="code">&lt;p&gt;</span> define um <b>parágrafo</b>.</p>
+          <p>Contém uma tag de abertura <span class="code">&lt;p&gt;</span> e uma tag de fechamento <span class="code">&lt;/p&gt;</span>.</p>
+          <p>O contéudo do elemento é: <i>Meu primeiro parágrafo.</i></p>
+
+          <!-- Code block -->
+          <div>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">p</span>&gt;Meu primeiro parágrafo.&lt;/<span class="tag">p</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Elementos Vazios</h3>
+          <p>Elementos sem contéudo são chamados <i>Elementos Vazios</i>.</p>
+
+          <p><span class="code">&lt;br&gt;</span> é um elemento vazio sem tag de fechamento (<span class="code">&lt;br&gt;</span> define uma quebra de linha).</p>
+
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-padding-32 w3-container">
+        <div class="w3-bar w3-twothird">
+          <a class="w3-button w3-black" href="../index.html">« Introdução</a>
+          <a class="w3-button w3-black w3-right" href="02-attributes.html">Atributos »</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>
