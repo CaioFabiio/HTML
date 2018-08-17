@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atributos - HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+        <a href="../css/css.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CSS</a>
+        <a href="../exercises.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Exercícios</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="00-intro.html">Introdução</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="01-elements.html">Elementos</a>
+      <a class="w3-bar-item w3-button w3-black" href="#">Atributos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="03-headings.html">Cabeçalhos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="04-paragraphs.html">Parágrafos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="05-formatting.html">Formatação</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="06-styles.html">Estilos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="07-comments.html">Comentários</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="08-colors.html">Cores</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Atributos</h1>
+          
+          <!-- Pagination -->
+          <div class="w3-bar">
+            <a class="w3-button w3-black" href="01-elements.html">« Elementos</a>
+            <a class="w3-button w3-black w3-right" href="03-headings.html">Cabeçalhos »</a>
+          </div>
+          <hr>
+
+          <p>Atributos fornecem informações adicionais sobre os elementos.</p>
+          <hr>
+
+          <h3 class="text-teal">Atributos</h3>
+          <ul>
+            <li>Todos os elementos HTML podem ter <b>atributos</b></li>
+            <li>Atributos fornecem <b>informações adicionais</b> sobre um elemento</li>
+            <li>Atributos sempre são especificados na <b>tag de abertura</b></li>
+            <li>Atributos geralmente vêm em pares nome/valor: <span class="code">nome="valor"</span></li>
+          </ul>
+          <hr>
+
+          <h3 class="text-teal">Atributo href</h3>
+          <p>Links são definidos com a tag <span class="code">&lt;a&gt;</span>. O endereço do link é especificado no atributo <span class="code">href</span>:</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">a</span> <span class="atr">href</span>=<span class="str">"https://www.google.com/"</span>&gt;Isto é um link&lt;/<span class="tag">a</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Atributo title</h3>
+          <p>Aqui, o atributo <span class="code">title</span> adicionado ao elemento <span class="code">&lt;p&gt;</span>. O valor do atributo <span class="code">title</span> será exibido quando o mouse estiver sobre o parágrafo:</p>
+          
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">p</span> <span class="atr">title</span>=<span class="str" title="Isto é um título.">"Sou um título"</span>&gt;Isto é um parágrafo.&lt;/<span class="tag">p</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Atributo alt</h3>
+          <p>O atributo <span class="code">alt</span> especifica um texto alternativo a ser usado quando uma imagem não puder ser exibida.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">img</span> <span class="atr">src</span>=<span class="str">"imagem.jpg"</span> <span class="atr">alt</span>=<span class="str">"Texto da imagem."</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Atributo style</h3>
+          <p>O atributo <span class="code">style</span> é usado para especificar a estilização de um elemento, como a cor, fonte, tamanho etc.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">p</span> <span class="atr">style</span>=<span class="str">"</span><span class="stl">color</span>:<span class="stl">red</span>;<span class="str">"</span>&gt;Isto é um parágrafo&lt;/<span class="tag">p</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-padding-32 w3-container">
+        <div class="w3-bar w3-twothird">
+          <a class="w3-button w3-black" href="01-elements.html">« Elementos</a>
+          <a class="w3-button w3-black w3-right" href="03-headings.html">Cabeçalhos »</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>
