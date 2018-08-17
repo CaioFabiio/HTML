@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cabeçalhos - HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+        <a href="../css/css.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CSS</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="00-intro.html">Introdução</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="01-elements.html">Elementos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="02-attributes.html">Atributos</a>
+      <a class="w3-bar-item w3-button w3-black" href="#">Cabeçalhos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="04-paragraphs.html">Parágrafos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="05-formatting.html">Formatação</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="06-styles.html">Estilos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="07-comments.html">Comentários</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Cabeçalhos</h1>
+          
+          <!-- Pagination -->
+          <div class="w3-bar">
+            <a class="w3-button w3-black" href="02-attributes.html">« Atributos</a>
+            <a class="w3-button w3-black w3-right" href="04-paragraphs.html">Parágrafos »</a>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Cabeçalhos</h3>
+
+          <p>Cabeçalhos são definidos com as tags de <span class="code">&lt;h1&gt;</span> a <span class="code">&lt;h6&gt;</span>.</p>
+          <p><span class="code">&lt;h1&gt;</span> define o cabeçalho mais importante. <span class="code">&lt;h6&gt;</span> define o cabeçalho menos importante.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">h1</span>&gt;Cabeçalho 1&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">h2</span>&gt;Cabeçalho 2&lt;/<span class="tag">h2</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">h3</span>&gt;Cabeçalho 3&lt;/<span class="tag">h3</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">h4</span>&gt;Cabeçalho 4&lt;/<span class="tag">h4</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">h5</span>&gt;Cabeçalho 5&lt;/<span class="tag">h5</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">h6</span>&gt;Cabeçalho 6&lt;/<span class="tag">h6</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Cabeçalhos São Importantes</h3>
+          <p>Motores de busca utilizam cabeçalhos para indexar a estrutura e o conteúdo das páginas web.</p>
+          <p>Usuários selecionam as páginas pelo título. É importante usar cabeçalhos para exibir a estrutura do documento.</p>
+          <p>Cabeçalhos <span class="code">&lt;h1&gt;</span> devem ser usados para títulos principais, seguidos por cabeçalhos <span class="code">&lt;h2&gt;</span> e assim por diante.</p>
+
+          <div class="panel note">
+            <p><b>Nota:</b> Utilize cabeçalhos apenas para títulos. Não utilize cabeçalhos para fazer textos <b>GRANDES</b> ou <b>negrito</b>.</p>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Régua Horizontal</h3>
+          <p>A tag <span class="code">&lt;hr&gt;</span> indica uma mudança temática em uma página. É exibida como uma linha horizontal.</p>
+          <p>O elemento <span class="code">&lt;hr&gt;</span> é usado para separar o conteúdo em uma página HTML:</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">h1</span>&gt;Este é o cabeçalho 1&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">p</span>&gt;Algum texto.&lt;/<span class="tag">p</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">hr</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">h2</span>&gt;Este é o cabeçalho 2&lt;/<span class="tag">h2</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">p</span>&gt;Outro texto.&lt;/<span class="tag">p</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">hr</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-padding-32 w3-container">
+        <div class="w3-bar w3-twothird">
+          <a class="w3-button w3-black" href="02-attributes.html">« Atributos</a>
+          <a class="w3-button w3-black w3-right" href="04-paragraphs.html">Parágrafos »</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>
