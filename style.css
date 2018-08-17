@@ -1,5 +1,5 @@
 html, body, h1, h2, h3, h4, h5, h6 {
-	font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .w3-sidebar {
@@ -9,62 +9,81 @@ html, body, h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   position: fixed;
   height: inherit;
+  overflow-y: scroll;
+}
+
+.panel {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.w3-container, .panel {
+    padding: 0.01em 16px;
 }
 
 .text-teal {
-	color: #009688;
+  color: #009688;
+}
+
+.note {
+    background-color: rgba(0,150,136,0.2);
+    border-left: 6px solid #009688;
 }
 
 .code {
-  	font-family: Consolas, Menlo, Monaco, Lucida Console, Courier New, monospace;
-  	color: red;
-  	background-color: #f0f0f0
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Courier New, monospace;
+    color: red;
+    background-color: #f0f0f0
 
 }
 
 .tag, .unit {
-	color: #F92672;
+  color: #F92672;
 }
 
 .atr{
-	color: #A6E22E;
+  color: #A6E22E;
 }
 
 .str {
-	color: #FFE792;
+  color: #FFE792;
+}
+
+.com {
+  color: #747056;
 }
 
 .content {
-	margin: 10px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .example {
-	margin: 0;
+  margin: 0;
 }
 
 .stl {
-	color: #66D9EF;
+  color: #66D9EF;
 }
 
 .nmb {
-	color: #AE81FF;
+  color: #AE81FF;
 }
 
 .block {
-  	background-color: #272822;
-  	font-family: Consolas, Menlo, Monaco, Lucida Console, Courier New, monospace;
-  	font-size: 12px;
-  	margin-left: 33.,33333%;
-  	margin-top: 10px;
-  	margin-bottom: 10px;
-  	overflow: auto;
-  	width: auto;
-  	padding: 10px 0px 10px 0px;
-  	max-height: 600px;
-  	color: #F8F8F2;
-  	counter-reset: line;
-  	line-height: 0;
-  	text-align: left!important;
+    background-color: #272822;
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Courier New, monospace;
+    font-size: 12px;
+    margin-left: 33.,33333%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: auto;
+    width: auto;
+    padding: 10px 0px 10px 0px;
+    max-height: 600px;
+    color: #F8F8F2;
+    counter-reset: line;
+    line-height: 0;
+    text-align: left!important;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -73,9 +92,9 @@ html, body, h1, h2, h3, h4, h5, h6 {
 .line {
     display: block;
     line-height: 1rem;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
+    user-select: text;
+    -moz-user-select: text;
+    -webkit-user-select: text;
 }
 
 .line::before {
