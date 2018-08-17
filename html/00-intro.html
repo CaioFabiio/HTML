@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desenvolvimento Web</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Home</a>
+        <a href="../css/css.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CSS</a>
+        <a href="exercises.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Exercícios</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
+      <a class="w3-bar-item w3-button w3-black" href="#">Introdução</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="01-elements.html">Elementos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="02-attributes.html">Atributos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="03-headings.html">Cabeçalhos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="04-paragraphs.html">Parágrafos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="05-formatting.html">Formatação</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="06-styles.html">Estilos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="07-comments.html">Comentários</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="08-colors.html">Cores</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Introdução ao HTML</h1>
+          
+          <!-- Pagination -->
+          <div class="w3-bar">
+            <a class="w3-button w3-black w3-right" href="01-elements.html">Elementos »</a>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">O Que é HTML?</h3>
+          <p>HTML é o formato padrão para criação de páginas web.</p>
+          <ul>
+            <li>HTML é abreviação para <i>Hyper Text Markup Language</i></li>
+            <li>HTML Descreve a estrutura de páginas Web utilizando marcação</li>
+            <li>Elementos HTML são a base das páginas HTML</li>
+            <li>Elementos são representados por <i>tags</i></li>
+            <li><i>Tags</i> rotulam partes do conteúdo, como "título", "parágrafo", "tabela", etc</li>
+            <li>Os navegadores não exibem as <i>tags</i> do HTML, mas as utilizam para formatar o conteúdo da página</li>
+          </ul>
+          <hr>
+
+          <h3 class="text-teal">Um Exemplo HTML</h3>
+          
+          <!-- Code block -->
+          <div>
+            <pre class="block">
+              <span class="line">&lt;!<span class="tag">DOCTYPE</span> html&gt;</span>
+              <span class="line">&lt;<span class="tag">html</span>&gt;</span>
+              <span class="line">  &lt;<span class="tag">head</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">title</span>&gt;Titulo da Pagina&lt;/<span class="tag">title</span>&gt;</span>
+              <span class="line">  &lt;/<span class="tag">head</span>&gt;</span>
+              <span class="line"></span>
+
+              <span class="line">  &lt;<span class="tag">body</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">h1</span>&gt;Meu primeiro titulo&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span>&gt;Meu primeiro paragrafo&lt;/<span class="tag">p</span>&gt;</span>
+              <span class="line">  &lt;/<span class="tag">body</span>&gt;</span>
+              <span class="line">&lt;/<span class="tag">html</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <ul>
+            <li>A declaração <span class="code">&lt;!DOCTYPE html&gt;</span> define que o arquivo será HTML5</li>
+            <li>O elemento <span class="code">&lt;html&gt;</span> é a base de uma página HTML</li>
+            <li>O elemento <span class="code">&lt;head&gt;</span> contém metainformações sobre o arquivo</li>
+            <li>O elemento <span class="code">&lt;title&gt;</span> especifica um título para o arquivo</li>
+            <li>O elemento <span class="code">&lt;body&gt;</span> contém o conteúdo visual da página</li>
+            <li>O elemento <span class="code">&lt;h1&gt;</span> define um cabeçalho grande</li>
+            <li>O elemento <span class="code">&lt;p&gt;</span> define um parágrafo</li> 
+          </ul>
+          <hr>
+
+          <!-- Tags -->
+          <h3 class="text-teal">Tags</h3>
+          <p>Tags em HTML são elementos entre <span class="code">&lt &gt</span>:</p>
+
+          <div class="panel w3-light-grey w3-border">
+            <p class="w3-xlarge">&lt;tag&gt;conteúdo...&lt;/tag&gt;</p>
+          </div>
+
+          <ul>
+            <li>Tags geralmente são <b>em pares</b> como <span class="code">&lt;p&gt;</span> e <span class="code">&lt;/p&gt;</span></li>
+            <li>A primeira tag do par é a <b>tag inicial</b> ou <b>tag de abertura</b>, a segunda tag é a <b>tag final</b> ou <b>tag de fechamento</b></li>
+            <li>A tag de fechamento é escrita como a tag inicial, porém adicionando uma barra antes do nome da tag</li>
+          </ul>
+          <hr>
+
+          <!-- Web Browsers -->
+          <h3 class="text-teal">Navegadores</h3>
+          <p>O propósito de um Navegador de Internet (Chrome, Firefox, Internet Explorer) é ler documentos HTML e exibi-los.</p>
+          <p>O navegador não exibe as tags HTML, mas as usa para determinar como exibir o documento.</p>
+          <hr>
+
+
+          <h3 class="text-teal">Estrura de Uma Página HTML</h3>
+          <p>Abaixo está a visualização da estrutura de uma página HTML:</p>
+          
+          <!-- Structure -->
+          <div style="width:99%;border:1px solid grey;padding:3px;margin:0;background-color:#ddd">&lt;html&gt;
+            <div style="width:90%;border:1px solid grey;padding:3px;margin:20px">&lt;head&gt;
+              <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;title&gt;Título da Página&lt;/title&gt;
+              </div>
+
+              &lt;/head&gt;
+            </div>
+            
+            <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#ddd">&lt;body&gt;
+              <div style="width:90%;border:1px solid grey;padding:3px;margin:20px;background-color:#fff">
+                <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;h1&gt;Isto é um cabeçalho&lt;/h1&gt;</div>
+
+                <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Isto é um parágrafo.&lt;/p&gt;</div>
+
+                <div style="width:90%;border:1px solid grey;padding:5px;margin:20px">&lt;p&gt;Isto é outro parágrafo.&lt;/p&gt;</div>
+              </div>
+              
+              &lt;/body&gt;
+            </div>
+            
+            &lt;/html&gt;
+          </div>
+          
+          <div class="panel note">
+            <p><strong>Nota:</strong> Apenas o conteúdo dentro da seção <span class="code">&lt;body&gt;</span> (a área branca acima) é exibido no navegador.</p>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Declaração &lt;!DOCTYPE&gt;</h3>
+          <p>A declaração <span class="code">&lt;!DOCTYPE&gt;</span> representa o tipo do documento, e ajuda o navegador a exibir as páginas corretamente.</p>
+          <p>Deve aparecer apenas uma única vez, antes de qualquer tag.</p>
+
+          <!-- Code block -->
+          <div>
+            <pre class="block">
+              <span class="line">&lt;!<span class="tag">DOCTYPE</span> html&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Documentos HTML</h3>
+          <p>Todos os documentos HTML devem começar com a declaração do tipo do documento: <span class="code">&lt;!DOCTYPE html&gt;</span>.</p>
+
+          <p>O documento HTML em si começa com <span class="code">&lt;html&gt;</span> e termina com <span class="code">&lt;/html&gt;</span>.</p>
+
+          <p>A parte visível do documento HTML fica entre <span class="code">&lt;body&gt;</span> e <span class="code">&lt;/body&gt;</span>.</p>
+
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-padding-32 w3-container">
+        <div class="w3-bar w3-twothird">
+          <a class="w3-button w3-black w3-right" href="01-elements.html">Elementos »</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>
