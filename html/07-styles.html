@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Estilos - HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">HTML</a>
+        <a href="../css/css.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CSS</a>
+        <a href="../exercises.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Exercícios</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="../index.html">Introdução</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="01-elements.html">Elementos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="02-attributes.html">Atributos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="03-headings.html">Cabeçalhos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="04-paragraphs.html">Parágrafos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="05-comments.html">Comentários</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="06-formatting.html">Formatação</a>
+      <a class="w3-bar-item w3-button w3-black" href="#">Estilos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="08-colors.html">Cores</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="09-images.html">Imagens</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="10-links.html">Links</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="11-lists.html">Listas</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Estilização</h1>
+          
+          <!-- Pagination -->
+          <div class="w3-bar">
+            <a class="w3-button w3-black" href="06-formatting.html">« Formatação</a>
+            <a class="w3-button w3-black w3-right" href="08-colors.html">Cores »</a>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Atributo Style</h3>
+          <p>O atributo <span class="code">style</span> é utilizado para alterar o estilo do texto.</p>
+          <p><span class="code">style</span> tem a seguinte sintaxe:</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">tag</span> <span class="atr">style</span>=<span class="str">"</span><span class="stl">propriedade</span>:<span class="stl">valor</span>;<span class="str">"</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Cor de Fundo</h3>
+          <p>A propriedade <span class="code">background-color</span> define a cor de fundo do elemento.</p>
+          
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt;!<span class="tag">DOCTYPE</span> html&gt;</span>
+              <span class="line">&lt;<span class="tag">html</span>&gt;</span>
+              <span class="line">  &lt;<span class="tag">head</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">title</span>&gt;Cor de Fundo&lt;/<span class="tag">title</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt;</span>
+              <span class="line">  &lt;/<span class="tag">head</span>&gt;</span>
+              <span class="line"></span>
+              <span class="line">  &lt;<span class="tag">body</span> <span class="atr">style</span><span class="str">="</span><span class="stl">background-color</span>:<span class="stl">powderblue</span>;<span class="str">"</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">h1</span>&gt;Isto é um cabeçalho&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span>&gt;Isto é um parágrafo&lt;/<span class="tag">p</span>&gt;</span>
+              <span class="line">  &lt;/<span class="tag">body</span>&gt;</span>
+              <span class="line">&lt;/<span class="tag">html</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Cor do Texto</h3>
+          <p>A propriedade <span class="code">color</span> define a cor do texto no elemento.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">h1</span> <span class="atr">style</span><span class="str">="</span><span class="stl">color</span>:<span class="stl">blue</span>;<span class="str">"</span>&gt;Isto é um cabeçalho&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">p</span> <span class="atr">style</span><span class="str">="</span><span class="stl">color</span>:<span class="stl">red</span>;<span class="str">"</span>&gt;Isto é um parágrafo&lt;/<span class="tag">p</span>&gt;</span>
+
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Fonte</h3>
+          <p>A propriedade <span class="code">font-family</span> define a fonte a ser usada no elemento.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">h1</span> <span class="atr">style</span><span class="str">="</span><span class="stl">font-family</span>:<span class="str">verdana</span>;<span class="str">"</span>&gt;Isto é um cabeçalho&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">p</span> <span class="atr">style</span><span class="str">="</span><span class="stl">font-family</span>:<span class="str">courier</span>;<span class="str">"</span>&gt;Isto é um parágrafo&lt;/<span class="tag">p</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Tamanho da Fonte</h3>
+          <p>A propriedade <span class="code">font-size</span> define o tamanho da fonte no elemento.</p>
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt;<span class="tag">h1</span> <span class="atr">style</span><span class="str">="</span><span class="stl">font-size</span>:<span class="nmb">32</span><span class="unit">px</span>;<span class="str">"</span>&gt;Isto é um cabeçalho&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">&lt;<span class="tag">p</span> <span class="atr">style</span><span class="str">="</span><span class="stl">font-size</span>:<span class="nmb">1</span><span class="unit">em</span>;<span class="str">"</span>&gt;Isto é um parágrafo&lt;/<span class="tag">p</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Alinhamento do Texto</h3>
+          <p>A propriedade <span class="code">text-align</span> define o alinhamento horizontal do texto.</p>
+          <ul>
+            <li><span class="code">left</span> alinha o texto à esquerda</li>
+            <li><span class="code">center</span> centraliza o texto</li>
+            <li><span class="code">right</span> alinha o texto à direita</li>
+            <li><span class="code">justify</span> distribui o texto uniformemente entre as margens</li>
+          </ul>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt;!<span class="tag">DOCTYPE</span> html&gt;</span>
+              <span class="line">&lt;<span class="tag">html</span>&gt;</span>
+              <span class="line">  &lt;<span class="tag">head</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">title</span>&gt;Alinhamento de Parágrafos&lt;/<span class="tag">title</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt;</span>
+              <span class="line">  &lt;/<span class="tag">head</span>&gt;</span>
+              <span class="line"></span>
+              
+              <span class="line">  &lt;<span class="tag">body</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span> <span class="atr">style</span><span class="str">="</span><span class="stl">text-align</span>:<span class="stl">left</span>;<span class="str">"</span>&gt;Este parágrafo está à esquerda&lt;/<span class="tag">p</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span> <span class="atr">style</span><span class="str">="</span><span class="stl">text-align</span>:<span class="stl">center</span>;<span class="str">"</span>&gt;Este parágrafo está centralizado&lt;/<span class="tag">p</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span> <span class="atr">style</span><span class="str">="</span><span class="stl">text-align</span>:<span class="stl">right</span>;<span class="str">"</span>&gt;Este parágrafo está à direita&lt;/<span class="tag">p</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span> <span class="atr">style</span><span class="str">="</span><span class="stl">text-align</span>:<span class="stl">justify</span>;<span class="str">"</span>&gt;Este parágrafo está justificado&lt;/<span class="tag">p</span>&gt;</span>
+
+              <span class="line">  &lt;/<span class="tag">body</span>&gt;</span>
+              <span class="line">&lt;/<span class="tag">html</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h2 class="text-teal">Resumo</h2>
+          <ul>
+            <li><span class="code">style</span> dá estilo aos elementos</li>
+            <li><span class="code">background-color</span> define a cor de fundo do elemento</li>
+            <li><span class="code">color</span> define a cor do texto</li>
+            <li><span class="code">font-family</span> define a fonte do texto</li>
+            <li><span class="code">font-size</span> define o tamanho da fonte do texto</li>
+            <li><span class="code">text-align</span> define o alinhamento do texto</li>
+          </ul>
+
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-padding-32 w3-container">
+        <div class="w3-bar w3-twothird">
+          <a class="w3-button w3-black" href="06-formatting.html">« Formatação</a>
+          <a class="w3-button w3-black w3-right" href="08-colors.html">Cores »</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>

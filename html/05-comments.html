@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Atributos - HTML</title>
+    <title>Comentários - HTML</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -32,10 +32,10 @@
       <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
       <a class="w3-bar-item w3-button w3-hover-black" href="../index.html">Introdução</a>
       <a class="w3-bar-item w3-button w3-hover-black" href="01-elements.html">Elementos</a>
-      <a class="w3-bar-item w3-button w3-black" href="#">Atributos</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="02-attributes.html">Atributos</a>
       <a class="w3-bar-item w3-button w3-hover-black" href="03-headings.html">Cabeçalhos</a>
       <a class="w3-bar-item w3-button w3-hover-black" href="04-paragraphs.html">Parágrafos</a>
-      <a class="w3-bar-item w3-button w3-hover-black" href="05-comments.html">Comentários</a>
+      <a class="w3-bar-item w3-button w3-black" href="#">Comentários</a>
       <a class="w3-bar-item w3-button w3-hover-black" href="06-formatting.html">Formatação</a>
       <a class="w3-bar-item w3-button w3-hover-black" href="07-styles.html">Estilos</a>
       <a class="w3-bar-item w3-button w3-hover-black" href="08-colors.html">Cores</a>
@@ -52,78 +52,49 @@
 
       <div class="w3-row w3-padding-64">      
         <div class="w3-twothird w3-container">
-          <h1 class="text-teal">Atributos</h1>
+          <h1 class="text-teal">Comentários</h1>
           
           <!-- Pagination -->
           <div class="w3-bar">
-            <a class="w3-button w3-black" href="01-elements.html">« Elementos</a>
-            <a class="w3-button w3-black w3-right" href="03-headings.html">Cabeçalhos »</a>
+            <a class="w3-button w3-black" href="04-paragraphs.html">« Parágrafos</a>
+            <a class="w3-button w3-black w3-right" href="06-formatting.html">Formatação »</a>
           </div>
           <hr>
 
-          <p>Atributos fornecem informações adicionais sobre os elementos.</p>
+          <p>Tags de comentário são utilizadas para inserir comentários no código-fonte.</p>
           <hr>
 
-          <h3 class="text-teal">Atributos</h3>
-          <ul>
-            <li>Todos os elementos HTML podem ter <b>atributos</b></li>
-            <li>Atributos fornecem <b>informações adicionais</b> sobre um elemento</li>
-            <li>Atributos sempre são especificados na <b>tag de abertura</b></li>
-            <li>Atributos geralmente vêm em pares nome/valor: <span class="code">nome="valor"</span></li>
-          </ul>
-          <hr>
+          <h3 class="text-teal">Tag de Comentários</h3>
+          <p>Comentários são adicionados ao código-fonte utilizando a seguinte sintaxe:</p>
 
-          <h3 class="text-teal">Atributo href</h3>
-          <p>Links são definidos com a tag <span class="code">&lt;a&gt;</span>. O endereço do link é especificado no atributo <span class="code">href</span>:</p>
+          <!-- Code block -->
+          <div>
+            <pre class="block example">
+              <span class="line com">&lt;!-- Escreva o comentário aqui --&gt;</span></span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <p>Note que há um ponto de exclamação (!) na tag de abertura.</p>
+
+          <div class="panel note">
+            <p><b>Nota:</b> Comentários não são exibidos pelo navegador, mas podem ajudar a documentar o código-fonte.</p>
+          </div>
+
+          <p>Com comentários podemos adicionar anotações e lembretes no documento:</p>
 
           <!-- Code block -->
           <div>
             <h4 class="text-teal example">Exemplo</h4>
             <pre class="block example">
-              <span class="line">&lt;<span class="tag">a</span> <span class="atr">href</span>=<span class="str">"https://www.google.com/"</span>&gt;Isto é um link&lt;/<span class="tag">a</span>&gt;</span>
+              <span class="line"><span class="com">&lt;!-- Isto é um comentário --&gt;</span></span>
+              <span class="line"></span>
+              <span class="line">&lt;<span class="tag">p</span>&gt;Isto é um parágrafo&gt;/<span class="tag">p</span>&gt;</span>
+              <span class="line"></span>
+              <span class="line"><span class="com">&lt;!-- Lembrete para adicionar mais informações aqui --&gt;</span></span>
             </pre>
           </div>
-          <!-- End code block -->
-          <hr>
 
-          <h3 class="text-teal">Atributo title</h3>
-          <p>Aqui, o atributo <span class="code">title</span> adicionado ao elemento <span class="code">&lt;p&gt;</span>. O valor do atributo <span class="code">title</span> será exibido quando o mouse estiver sobre o parágrafo:</p>
-          
-          <!-- Code block -->
-          <div>
-            <h4 class="text-teal example">Exemplo</h4>
-            <pre class="block example">
-              <span class="line">&lt;<span class="tag">p</span> <span class="atr">title</span>=<span class="str" title="Isto é um título.">"Sou um título"</span>&gt;Isto é um parágrafo.&lt;/<span class="tag">p</span>&gt;</span>
-            </pre>
-          </div>
-          <!-- End code block -->
-          <hr>
-
-          <h3 class="text-teal">Atributo alt</h3>
-          <p>O atributo <span class="code">alt</span> especifica um texto alternativo a ser usado quando uma imagem não puder ser exibida.</p>
-
-          <!-- Code block -->
-          <div>
-            <h4 class="text-teal example">Exemplo</h4>
-            <pre class="block example">
-              <span class="line">&lt;<span class="tag">img</span> <span class="atr">src</span>=<span class="str">"imagem.jpg"</span> <span class="atr">alt</span>=<span class="str">"Texto da imagem."</span>&gt;</span>
-            </pre>
-          </div>
-          <!-- End code block -->
-          <hr>
-
-          <h3 class="text-teal">Atributo style</h3>
-          <p>O atributo <span class="code">style</span> é usado para especificar a estilização de um elemento, como a cor, fonte, tamanho etc.</p>
-
-          <!-- Code block -->
-          <div>
-            <h4 class="text-teal example">Exemplo</h4>
-            <pre class="block example">
-              <span class="line">&lt;<span class="tag">p</span> <span class="atr">style</span>=<span class="str">"</span><span class="stl">color</span>:<span class="stl">red</span>;<span class="str">"</span>&gt;Isto é um parágrafo&lt;/<span class="tag">p</span>&gt;</span>
-            </pre>
-          </div>
-          <!-- End code block -->
-          
         </div>
       </div>
 
@@ -131,8 +102,8 @@
 
       <div class="w3-padding-32 w3-container">
         <div class="w3-bar w3-twothird">
-          <a class="w3-button w3-black" href="01-elements.html">« Elementos</a>
-          <a class="w3-button w3-black w3-right" href="03-headings.html">Cabeçalhos »</a>
+          <a class="w3-button w3-black" href="04-paragraphs.html">« Parágrafos</a>
+          <a class="w3-button w3-black w3-right" href="06-formatting.html">Formatação »</a>
         </div>
       </div>
 
