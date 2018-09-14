@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bordas - CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">HTML</a>
+        <a href="01-css.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CSS</a>
+        <a href="../exercises.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Exercícios</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="01-css.html">Introdução</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="02-selectors.html">Seletores</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="03-box-model.html">Box Model</a>
+      <a class="w3-bar-item w3-button w3-black" href="">Bordas</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Bordas</h1>
+          
+          <!-- Pagination -->
+          <div class="w3-bar">
+            <a class="w3-button w3-black" href="03-box-model.html">« Box Model</a>
+            <!-- <a class="w3-button w3-black w3-right" href="#">Próximo »</a> -->
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Propriedades de Bordas</h3>
+          <p>A propriedade <span class="code">border</span> permite especificar o estilo, espessura, e cor das bordas de um elemento.</p>
+
+          <div class="w3-container w3-border w3-border-black w3-margin-top">
+            <p>Bordas em todas as laterais.</p>
+          </div>
+          <br>
+          
+          <div class="w3-container w3-border-bottom w3-border-red">
+            <p>Borda inferior vermelha.</p>
+          </div>
+          <br>
+          
+          <div class="w3-container w3-border w3-round-xlarge">
+            <p>Bordas arredondadas.</p>
+          </div>
+          <br>
+          
+          <div class="w3-container w3-pale-blue w3-leftbar w3-border-blue">
+            <p>Borda lateral esquerda azul.</p>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Estilo de Bordas</h3>
+          <p>A propriedade <span class="code">border-style</span> especifica que tipo de borda exibir.</p>
+          <p>São permitidos os seguintes valores:</p>
+          <ul>
+            <li><span class="code">dotted</span> - Define uma borda pontilhada</li>
+            <li><span class="code">dashed</span> - Define uma borda tracejada</li>
+            <li><span class="code">solid</span> - Define uma borda sólida</li>
+            <li><span class="code">double</span> - Define uma borda dupla</li>
+            <li><span class="code">none</span> - Sem bordas</li>
+            <li><span class="code">hidden</span> - Bordas ocultas</li>
+          </ul>
+
+          <p>A propriedade <span class="code">border-style</span> pode ter até quatro valores (borda superior, direita, inferior, e esquerda).</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p.pontilhada</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">dotted</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+              
+              <span class="line"><span class="tag">p.tracejada</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">dashed</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+              
+              <span class="line"><span class="tag">p.solida</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">solid</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+
+              <span class="line"><span class="tag">p.dupla</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">double</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+
+              <span class="line"><span class="tag">p.none</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">none</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+              
+              <span class="line"><span class="tag">p.oculta</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">hidden</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span> 
+
+              <span class="line"><span class="tag">p.mix</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">dotted dashed solid double</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <h4 class="text-teal">Resultado:</h4>
+          <div class="W3-padding w3-container" style="background-color:#F0F0F0">
+            <p style="border-style: dotted;">A dotted border.</p>
+            <p style="border-style: dashed;">A dashed border.</p>
+            <p style="border-style: solid;">A solid border.</p>
+            <p style="border-style: double;">A double border.</p>
+            <p style="border-style: none;">No border.</p>
+            <p style="border-style: hidden;">A hidden border.</p>
+            <p style="border-style: dotted dashed solid double;">A mixed border.</p>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Espessura de Bordas</h3>
+          <p>A propriedade <span class="code">border-width</span> especifica a espessura das quatro bordas.</p>
+
+          <p>A espessura pode ser definida com um tamanho específico (com px, pt, cm, em, etc) ou utilizando um valor pré-definido: <span class="code">thin</span>, <span class="code">medium</span> ou <span class="code">thick</span>.</p>
+
+          <p>A propriedade <span class="code">border-width</span> pode ter até quatro valores (borda superior, direita, inferior, e esquerda).</p>
+
+          <div style="border:5px solid black;padding:8px;">5px border-width</div>
+          
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p.um</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">solid</span>;</span>
+              <span class="line">  <span class="stl">border-width</span>: <span class="nmb">5</span><span class="unit">px</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+              
+              <span class="line"><span class="tag">p.dois</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">solid</span>;</span>
+              <span class="line">  <span class="stl">border-width</span>: <span class="stl">medium</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+              
+              <span class="line"><span class="tag">p.tres</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">solid</span>;</span>
+              <span class="line">  <span class="stl">border-width</span>: <span class="nmb">2</span><span class="unit">px</span> <span class="nmb">10</span><span class="unit">px</span> <span class="nmb">4</span><span class="unit">px</span> <span class="nmb">20</span><span class="unit">px</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Cor de Bordas</h3>
+          <p>A propriedade <span class="code">border-color</span> é utilizada para definir a cor das quatro bordas.</p>
+
+          <p>A cor pode ser definida por:</p>
+          
+          <ul>
+            <li>Nome - especifica-se o nome da cor, por exemplo <span class="code">red</span></li>
+            <li>Hex - especifica-se um valor hexadecimal, por exemplo <span class="code">#FF0000</span></li>
+            <li>RGB - especifica-se um valor RGB, por exemplo <span class="code">rgb(255,0,0)</span></li>
+          </ul>
+
+          <p>A propriedade <span class="code">border-color</span> pode ter até quatro cores (borda superior, direita, inferior, e esquerda).</p>
+          <p>Se não for especificada, <span class="code">border-color</span> recebe a cor do elemento.</p>
+
+          <div style="border:5px solid red;padding:8px;">Borda vermelha</div>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p.um</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">solid</span>;</span>
+              <span class="line">  <span class="stl">border-color</span>: <span class="stl">red</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+              
+              <span class="line"><span class="tag">p.dois</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">solid</span>;</span>
+              <span class="line">  <span class="stl">border-color</span>: <span class="stl">green</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+              
+              <span class="line"><span class="tag">p.tres</span> {</span>
+              <span class="line">  <span class="stl">border-style</span>: <span class="stl">solid</span>;</span>
+              <span class="line">  <span class="stl">border-color</span>: <span class="stl">red</span> <span class="stl">green</span> <span class="stl">blue</span> <span class="stl">yellow</span>;</span>
+              <span class="line">}</span>
+              <span class="line"></span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">
+
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-padding-32 w3-container">
+        <div class="w3-bar w3-twothird">
+          <a class="w3-button w3-black" href="03-box-model.html">« Box Model</a>
+          <!-- <a class="w3-button w3-black w3-right" href="#">Próximo »</a> -->
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio e Felipe Arisi</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Seletores - CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">HTML</a>
+        <a href="01-css.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CSS</a>
+        <a href="../exercises.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Exercícios</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="01-css.html">Introdução</a>
+      <a class="w3-bar-item w3-button w3-black" href="">Seletores</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="03-box-model.html">Box Model</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="04-borders.html">Bordas</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Seletores</h1>
+
+          <!-- Pagination -->
+          <div class="w3-bar">
+            <a class="w3-button w3-black" href="01-css.html">« Introdução</a>
+            <a class="w3-button w3-black w3-right" href="03-box-model.html">Box Model »</a>
+          </div>
+          <hr>
+
+          <p>Seletores são utilizados para "encontrar" (ou selecionar) elementos baseados em seus nomes, id, classe, atributo etc.</p>
+          <hr>
+
+          <h3 class="text-teal">O Seletor <i>elemento</i></h3>          
+          <p>O seletor elemento seleciona elementos baseado no nome do elemento.</p>
+          <p>Podemos selecionar todos os elementos <span class="code">&lt;p&gt;</span> desta forma (neste caso, todos os elementos <span class="code">&lt;p&gt;</span> estarão centralizado e serão vermelhos.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p</span> {</span>
+              <span class="line">  <span class="stl">text-align</span>: <span class="stl">center</span>;</span>
+              <span class="line">  <span class="stl">color</span>: <span class="stl">red</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Classes</h3>
+          <p>O atributo <span class="code">class</span> especifica uma ou mais classes para um elemento. Pode ser usado pelo CSS para atribuir estilo a todos os elementos de determinada classe.</p>
+
+          <p>O seletor classe seleciona elementos com um atributo classe específico.</p>
+          
+          <p>Para selecionar uma classe, utiliza-se o caractere <span class="code">.</span> <del>(ponto)</del>, seguido pelo nome da classe.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt;!<span class="tag">DOCTYPE</span> html&gt;</span>
+              <span class="line">&lt;<span class="tag">html</span>&gt;</span>
+              <span class="line">  &lt;<span class="tag">head</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">title</span>&gt;Classes&lt;/<span class="tag">title</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">style</span>&gt;</span>
+              <span class="line">      <span class="atr">.cidades</span> {</span>
+              <span class="line">        <span class="stl">background-color</span>: <span class="stl">tomato</span>;</span>
+              <span class="line">        <span class="stl">color</span>: <span class="stl">white</span>;</span>
+              <span class="line">        <span class="stl">padding</span>: <span class="nmb">10</span><span class="unit">px</span>;</span>
+              <span class="line">      }</span>
+              <span class="line">    &lt;/<span class="tag">style</span>&gt;</span>
+              <span class="line">  &lt;/<span class="tag">head</span>&gt;</span>
+              
+              <span class="line"></span>
+
+              <span class="line">  &lt;<span class="tag">body</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">h2</span> <span class="atr">class</span>=<span class="str">"cidades"</span>&gt;Londres&lt;/<span class="tag">h2</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span>&gt;Londres é a capital da Inglaterra.&lt;/<span class="tag">p</span>&gt;</span>
+              
+              <span class="line"></span>
+              
+              <span class="line">    &lt;<span class="tag">h2</span> <span class="atr">class</span>=<span class="str">"cidades"</span>&gt;Paris&lt;/<span class="tag">h2</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span>&gt;Paris é a capital da França.&lt;/<span class="tag">p</span>&gt;</span>
+              
+              <span class="line"></span>
+
+              <span class="line">    &lt;<span class="tag">h2</span> <span class="atr">class</span>=<span class="str">"cidades"</span>&gt;Tóquio&lt;/<span class="tag">h2</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">p</span>&gt;Tóquio é a capital do Japão.&lt;/<span class="tag">p</span>&gt;</span>
+              <span class="line">  &lt;/<span class="tag">body</span>&gt;</span>
+              <span class="line">&lt;/<span class="tag">html</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <p>Podemos também selecionar apenas alguns elementos específicos que serão afetados por uma classe.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line"><span class="atr">p.center</span> {</span>
+              <span class="line">  <span class="stl">text-align</span>: <span class="stl">center</span>;</span>
+              <span class="line">  <span class="stl">color</span>: <span class="stl">red</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal"><em>id</em></h3>
+          <p>O atributo <span class="code">id</span> especifica uma identificação <del style="color:maroon;">nome</del> exclusiva para o elemento. Pode ser usado pelo CSS para atribuir estilo a um único elemento.</p>
+
+          <p>O seletor <i>id</i> usa o atributo id para selecionar um elemento específico.</p>
+
+          <p>Para selecionar um elemento com um id específico, utiliza-se o caractere <span class="code">#</span> seguido do id do elemento.</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4> 
+            <pre class="block example">
+              <span class="line">&lt;!<span class="tag">DOCTYPE</span> html&gt;</span>
+              <span class="line">&lt;<span class="tag">html</span>&gt;</span>
+              <span class="line">  &lt;<span class="tag">head</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">title</span>&gt;Atributo id&lt;/<span class="tag">title</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">meta</span> <span class="atr">charset</span><span class="str">="utf-8"</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">style</span>&gt;</span>
+              <span class="line">      <span class="atr">#titulo</span> {</span>
+              <span class="line">        <span class="stl">background-color</span>: <span class="stl">lightblue</span>;</span>
+              <span class="line">        <span class="stl">color</span>: <span class="stl">black</span>;</span>
+              <span class="line">        <span class="stl">padding</span>: <span class="nmb">40</span><span class="unit">px</span>;</span>
+              <span class="line">        <span class="stl">text-align</span>: <span class="stl">center</span>;</span>
+              <span class="line">      }</span>
+              <span class="line">    &lt;/<span class="tag">style</span>&gt;</span>
+              <span class="line">  &lt;/<span class="tag">head</span>&gt;</span>
+              
+              <span class="line"></span>
+
+              <span class="line">  &lt;<span class="tag">body</span>&gt;</span>
+              <span class="line">    &lt;<span class="tag">h1</span> <span class="atr">id</span>=<span class="str">"titulo"</span>&gt;Isto é um cabeçalho&lt;/<span class="tag">h1</span>&gt;</span>
+              <span class="line">  &lt;/<span class="tag">body</span>&gt;</span>
+              <span class="line">&lt;/<span class="tag">html</span>&gt;</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <div class="note panel">
+            <p><em>NOTA: Um id <b>DEVE</b> ser único dentro do arquivo HTML.</em></p>
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Agrupando Seletores</h3>
+          <p>Se houverem elementos com as mesmas definições de estilo, por exemplo:</p>
+
+          <!-- Code block -->
+          <pre class="block example">
+            <span class="line"><span class="tag">h1</span> {</span>
+            <span class="line">  <span class="stl">text-align</span>: <span class="stl">center</span>;</span>
+            <span class="line">  <span class="stl">color</span>: <span class="stl">red</span>;</span>
+            <span class="line">}</span>
+            <span class="line"></span>
+            <span class="line"><span class="tag">h2</span> {</span>
+            <span class="line">  <span class="stl">text-align</span>: <span class="stl">center</span>;</span>
+            <span class="line">  <span class="stl">color</span>: <span class="stl">red</span>;</span>
+            <span class="line">}</span>
+            <span class="line"></span>
+            <span class="line"><span class="tag">p</span> {</span>
+            <span class="line">  <span class="stl">text-align</span>: <span class="stl">center</span>;</span>
+            <span class="line">  <span class="stl">color</span>: <span class="stl">red</span>;</span>
+            <span class="line">}</span>
+          </pre>
+          <!-- End code block -->
+
+          <p>Então se pode agrupar os seletores, de forma a diminuir o código.</p>
+          <p>Para agrupá-los, separa-se cada seletor por vírgula.</p>
+
+          <!-- Code block -->
+          <pre class="block example">
+            <span class="line"><span class="tag">h1</span>, <span class="tag">h2</span>, <span class="tag">p</span> {</span>
+            <span class="line">  <span class="stl">text-align</span>: <span class="stl">center</span>;</span>
+            <span class="line">  <span class="stl">color</span>: <span class="stl">red</span>;</span>
+            <span class="line">}</span>
+          </pre>
+          <!-- End code block -->
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-padding-32 w3-container">
+        <div class="w3-bar w3-twothird">
+          <a class="w3-button w3-black" href="css.html">« Introdução</a>
+          <a class="w3-button w3-black w3-right" href="03-box-model.html">Box Model »</a>
+        </div>
+      </div>
+      
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio e Felipe Arisi</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>
