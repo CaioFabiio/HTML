@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Margens - CSS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+  <body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+      <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        
+        <a href="../index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">HTML</a>
+        <a href="01-css.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">CSS</a>
+        <a href="../exercises.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Exercícios</a>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+      </a>
+      <h4 class="w3-bar-item"><b>Conteúdo</b></h4>
+      <a class="w3-bar-item w3-button w3-hover-black" href="01-css.html">Introdução</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="02-selectors.html">Seletores</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="03-box-model.html">Box Model</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="04-borders.html">Bordas</a>
+      <a class="w3-bar-item w3-button w3-black" href="">Margens</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="06-padding.html">Padding</a>
+      <a class="w3-bar-item w3-button w3-hover-black" href="07-display.html">Display</a>
+    </nav>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <div class="w3-row w3-padding-64">      
+        <div class="w3-twothird w3-container">
+          <h1 class="text-teal">Margens</h1>
+          
+          <!-- Pagination -->
+          <div class="w3-bar">
+            <a class="w3-button w3-black" href="04-borders.html">« Bordas</a>
+            <a class="w3-button w3-black w3-right" href="06-padding.html">Padding »</a>
+          </div>
+          <hr>
+
+          <div style="border:1px solid #009688;padding:5px;margin:70px;">
+            Este elemento tem margem de 70px.
+          </div>
+          <hr>
+
+          <h3 class="text-teal">Margens</h3>
+          <p>A propriedade <span class="code">margin</span> é usada para criar espaço em torno dos elementos, fora de qualquer borda definida.</p>
+          <p>Com CSS temos controle total sobre as margens. Existem propriedades para definir a margem para cada lado de um elemento.</p>
+          <hr>
+
+          <h3 class="text-teal">Margem - Lados Individuais</h3>
+          <p>CSS tem propriedades para especificar a margem para cada lado de um elemento:</p>
+          
+          <ul>
+            <li><span class="code">margin-top</span></li>
+            <li><span class="code">margin-right</span></li>
+            <li><span class="code">margin-bottom</span></li>
+            <li><span class="code">margin-left</span></li>
+          </ul>
+
+          <p>Todas as propriedades de margem podem ter os seguintes valores:</p>
+          <ul>
+            <li><b>auto</b> - o navegador calcula a margem</li>
+            <li><b><i>length</i></b> - especifica a margem em px, pt, cm, em, etc.</li>
+            <li><i><b>%</b></i> - especifica a margem em % de largura do elemento em que está contido</li>
+            <li><b>inherit</b> - especifica que a margem deve ser herdada do pai do elemento</li>
+          </ul>
+
+          <div class="note panel">
+            <p><b>Dica:</b> Valores negativos são permitidos.</p>
+          </div>
+
+          <p>O exemplo a seguir define diferentes margens para todos os lados de um elemento &lt;p&gt;:</p>
+
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p</span> {</span>
+              <span class="line">  <span class="stl">margin-top</span>: <span class="nmb">100</span><span class="unit">px</span>;</span>
+              <span class="line">  <span class="stl">margin-bottom</span>: <span class="nmb">100</span><span class="unit">px</span>;</span>
+              <span class="line">  <span class="stl">margin-right</span>: <span class="nmb">150</span><span class="unit">px</span>;</span>
+              <span class="line">  <span class="stl">margin-left</span>: <span class="nmb">80</span><span class="unit">px</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Margem - Propriedade Abreviada</h3>
+          <p>Para diminuir o código, é possível especificar todas as margens em uma propriedade.</p>
+          <p>Funciona assim:</p>
+          
+          <p>Se a propriedade <span class="code">margin</span> tiver quatro valores:</p>
+          <ul>
+            <li><b>margin: 25px 50px 75px 100px;</b>
+              <ul>
+                <li>margem superior é 25px</li>
+                <li>margem direita é 50px</li>
+                <li>margem inferior é 75px</li>
+                <li>margem esquerda é 100px</li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p</span> {</span>
+              <span class="line">  <span class="stl">margin</span>: <span class="nmb">25</span><span class="unit">px</span> <span class="nmb">50</span><span class="unit">px</span> <span class="nmb">75</span><span class="unit">px</span> <span class="nmb">100</span><span class="unit">px</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <p>Se a propriedade <span class="code">margin</span> tiver três valores:</p>
+          <ul>
+            <li><b>margin: 25px 50px 75px;</b>
+              <ul>
+                <li>margem superior é 25px</li>
+                <li>margens direita e esquerda são 50px</li>
+                <li>margem inferior é 75px</li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p</span> {</span>
+              <span class="line">  <span class="stl">margin</span>: <span class="nmb">25</span><span class="unit">px</span> <span class="nmb">50</span><span class="unit">px</span> <span class="nmb">75</span><span class="unit">px</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+          <p>Se a propriedade <span class="code">margin</span> tiver dois valores:</p>
+          <ul>
+            <li><b>margin: 25px 50px;</b>
+              <ul>
+                <li>margens superior e inferior são 25px</li>
+                <li>margens direita e esquerda são 50px</li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p</span> {</span>
+              <span class="line">  <span class="stl">margin</span>: <span class="nmb">25</span><span class="unit">px</span> <span class="nmb">50</span><span class="unit">px</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->          
+
+          <p>Se a propriedade <span class="code">margin</span> tiver um valor:</p>
+          <ul>
+            <li><b>margin: 25px;</b>
+              <ul>
+                <li>todas as margens são 25px</li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">p</span> {</span>
+              <span class="line">  <span class="stl">margin</span>: <span class="nmb">25</span><span class="unit">px</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+          <hr>
+
+          <h3 class="text-teal">Valor <i>auto</i></h3>
+          <p>Podemos definir a propriedade <i>margin</i> para <span class="code">auto</span> para centralizar horizontalmente o elemento dentro de seu container.</p>
+          <p>O elemento ocupará a largura especificada, e o espaço restante será divido igualmente entre as margens esquerda e direita:</p>
+          
+          <!-- Code block -->
+          <div>
+            <h4 class="text-teal example">Exemplo</h4>
+            <pre class="block example">
+              <span class="line"><span class="tag">div</span> {</span>
+              <span class="line">  <span class="stl">width</span>: <span class="nmb">300</span><span class="unit">px</span>;</span>
+              <span class="line">  <span class="stl">margin</span>: <span class="stl">auto</span>;</span>
+              <span class="line">  <span class="stl">border</span>: <span class="nmb">1</span><span class="unit">px</span> <span class="stl">solid</span> <span class="stl">red</span>;</span>
+              <span class="line">}</span>
+            </pre>
+          </div>
+          <!-- End code block -->
+
+        </div>
+      </div>
+
+      <hr class="w3-twothird">
+
+      <div class="w3-padding-32 w3-container">
+        <div class="w3-bar w3-twothird">
+          <a class="w3-button w3-black" href="04-borders.html">« Bordas</a>
+          <a class="w3-button w3-black w3-right" href="06-padding.html">Padding »</a>
+        </div>
+      </div>
+
+      <footer id="myFooter">
+        <div class="w3-container w3-theme-l2">
+          <h4></h4>
+        </div>
+
+        <div class="w3-container w3-theme-l1">
+          <p>Powered by Caio Fábio</p>
+        </div>
+      </footer>
+    <!-- END MAIN -->
+    </div>
+    <script type="text/javascript" src="../script.js"></script>
+  </body>
+</html>
